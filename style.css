@@ -1,0 +1,80 @@
+body { margin: 0; font-family: 'Inter', sans-serif; }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Adjusted gap: 32rem is very wide; 
+       consider 'auto' for more responsive spacing */
+    gap: 32rem; 
+    
+    height: 80px;
+    padding-left: 18%; 
+    padding-right: 10%;
+    
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    
+    border-bottom: 1px solid #f3f4f6;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif; 
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.015em;
+    white-space: nowrap; /* Prevents logo from wrapping */
+}
+
+.bag-icon { color: #7c4117; }
+.brand-text { color: #080b13; }
+.amber-text { color: #7c4117; }
+
+.nav-links { 
+    display: flex; 
+    align-items: center; 
+    gap: 2rem; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #4b5563; 
+    font-weight: 500; 
+    font-size: 0.9rem; 
+}
+
+.nav-links a.active { color: #8d4f22; }
+
+.divider { width: 1px; height: 24px; background: #e5e7eb; margin: 0.4 rem; }
+
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+
+.search-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; }
+
+.nav-links .call-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fffbeb;
+    
+    /* Forces the text to brown */
+    color: #83431b ; 
+    
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Ensures the icon inside the button also stays brown */
+.nav-links .call-btn svg {
+    stroke: #83431b ;
+}
