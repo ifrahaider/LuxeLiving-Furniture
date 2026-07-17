@@ -332,3 +332,90 @@ p {
   display: inline-block; background: #f59e0b; color: white; 
   font-size: 9px; font-weight: 900; padding: 2px 6px; border-radius: 999px; margin-top: 4px; 
 }
+
+/* Footer Container */
+.footer {
+    background-color: #171717;
+    color: #a3a3a3;
+    padding: 60px 40px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h3 { /* Removed .logo from here */
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer-col p { font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
+
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: #a3a3a3; text-decoration: none; font-size: 0.9rem; }
+
+/* Icons */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #333;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.footer-col p i { color: #fbbf24; margin-right: 10px; }
+
+/* Bottom Copyright */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container { grid-template-columns: 1fr; }
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fbbf24; /* Sets the icon color to amber */
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.luxe {
+   color: #ffffff
+}
+
+.living {
+    color: #fbbf24; /* Amber for LIVING */
+}
+
+/* Optional: if the text is uppercase */
+.logo-text {
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
