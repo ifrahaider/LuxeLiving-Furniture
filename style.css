@@ -214,4 +214,121 @@ p {
     opacity: 0.9;
 }
 
+/* Container Setup */
+.flash-sale-section { max-width: 1280px; margin: 40px auto; padding: 0 32px; }
 
+.flash-sale-container {
+  background-color: #78350f; /* Amber-900 */
+  border-radius: 40px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  /* Remove flex from here, let content-wrapper handle layout */
+}
+
+/* Update the content-wrapper to allow the grid to grow */
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%; /* Ensure it fills the brown container */
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper { 
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    
+    /* Change 'space-between' to 'flex-start' */
+    justify-content: flex-start; 
+    
+    /* Add a specific gap value here to control the distance */
+    gap: 5px; 
+  }
+}
+
+/* Text Styling */
+.text-section { max-width: 450px; color: white; }
+.limited-tag { color: #fcd34d; font-weight: bold; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; }
+.text-section h2 { 
+    font-family: serif; 
+    font-size: 2.5rem; 
+    line-height: 1.1; 
+    margin: 16px 0; 
+}
+
+.text-section p { 
+    color: #ffea97;
+    opacity: 0.7; 
+    font-size: 0.85rem; 
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr)); /* Force 4 columns with min width */
+  gap: 12px;
+  width: 100%;
+}
+
+@media (min-width: 640px) { 
+  .product-grid { grid-template-columns: repeat(2, 1fr); } 
+}
+
+@media (min-width: 1024px) { 
+  .product-grid { 
+    grid-template-columns: repeat(4, 1fr); /* 4 cols on desktop */
+    width: 60%; /* Let the grid take up 60% of the brown box width */
+  } 
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05); /* Very light glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 8px; /* Compact padding */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.product-card:hover { background: white; }
+
+.img-container { 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  flex-shrink: 0; 
+}
+
+.img-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.product-details {
+  overflow: hidden; /* Keeps text inside the card */
+}
+
+/* Card Text */
+
+.product-details h4 { 
+  color: white; 
+  font-size: 0.75rem; /* Smaller font to fit */
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; /* Adds the "..." */
+}
+
+.product-card:hover h4 { color: #57534e; }
+.price-container { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.current-price { color: #fbbf24; font-weight: bold; font-size: 0.875rem; }
+.old-price { color: rgba(255, 255, 255, 0.4); text-decoration: line-through; font-size: 0.625rem; }
+.discount-badge { 
+  display: inline-block; background: #f59e0b; color: white; 
+  font-size: 9px; font-weight: 900; padding: 2px 6px; border-radius: 999px; margin-top: 4px; 
+}
